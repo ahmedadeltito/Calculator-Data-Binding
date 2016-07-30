@@ -1,0 +1,23 @@
+<resources xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="OperationsButton" parent="android:Widget.Button">
+        <item name="android:background">@color/calculatorButtonOperations</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/number_size</item>
+    </style>
+
+    <style name="NumbersButton" parent="android:Widget.Button">
+        <item name="android:background">@color/calculatorButtonNumbers</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/number_size</item>
+    </style>
+
+</resources>

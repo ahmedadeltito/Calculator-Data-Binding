@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.ahmedadeltito.calculatordatabinding.model.CalculatorModel" />
+
+        <variable
+            name="viewModel"
+            type="com.ahmedadeltito.calculatordatabinding.viewmodel.MainActivityViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom|end"
+            android:padding="10dp"
+            android:text="@{model.value}"
+            android:textSize="60sp"
+            bind:fontTextView="@{`OpenSans-Regular`}"
+            tools:text="0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    style="@style/NumbersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/number_seven)}"
+                    android:text="@string/number_seven"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/NumbersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/number_four)}"
+                    android:text="@string/number_four"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/NumbersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/number_one)}"
+                    android:text="@string/number_one"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/NumbersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/number_dot)}"
+                    android:text="@string/number_dot"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    style="@style/NumbersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/number_eight)}"
+                    android:text="@string/number_eight"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/NumbersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/number_five)}"
+                    android:text="@string/number_five"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/NumbersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/number_two)}"
+                    android:text="@string/number_two"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/NumbersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/number_zero)}"
+                    android:text="@string/number_zero"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    style="@style/NumbersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/number_nine)}"
+                    android:text="@string/number_nine"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/NumbersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/number_six)}"
+                    android:text="@string/number_six"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/NumbersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/number_three)}"
+                    android:text="@string/number_three"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/NumbersButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/equal)}"
+                    android:text="@string/equal"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    style="@style/OperationsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/delete)}"
+                    android:text="@string/delete"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/OperationsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/plus)}"
+                    android:text="@string/plus"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/OperationsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/minus)}"
+                    android:text="@string/minus"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/OperationsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/divided)}"
+                    android:text="@string/divided"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+                <Button
+                    style="@style/OperationsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:onClick="@{() -> viewModel.onShowData(@string/multiply)}"
+                    android:text="@string/multiply"
+                    bind:fontButton="@{`OpenSans-Regular`}" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
